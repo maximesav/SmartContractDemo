@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Signing DApp</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="container">
+    <h1>Signing DApp</h1>
+	<a href="#" class="btn btn-primary" onclick="newContract()">Deploy new contract</a>
+    <hr/>
+	<div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Authority</th>
+                    <th>Expert</th>
+                    <th>Customer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#" onclick="signAuthority(a_authority)" class="btn btn-primary">Sign As Authority</a></td>
+                    <td><a href="#" onclick="signAuthority(a_expert)" class="btn btn-primary">Sign As Authority</a></td>
+                    <td><a href="#" onclick="signAuthority(a_customer)" class="btn btn-primary">Sign As Authority</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" onclick="signExpert(a_authority)" class="btn btn-warning">Sign As Expert</a></td>
+                    <td><a href="#" onclick="signExpert(a_expert)" class="btn btn-warning">Sign As Expert</a></td>
+                    <td><a href="#" onclick="signExpert(a_customer)" class="btn btn-warning">Sign As Expert</a></td>
+                </tr>
+            <tr>
+                <td><a href="#" onclick="signCustomer(a_authority)" class="btn btn-danger">Sign As Customer</a></td>
+                <td><a href="#" onclick="signCustomer(a_expert)" class="btn btn-danger">Sign As Customer</a></td>
+                <td><a href="#" onclick="signCustomer(a_customer)" class="btn btn-danger">Sign As Customer</a></td>
+            </tr>
+            <tr>
+                <td><span id="AuthSignSpan" class="glyphicon"></span></td>
+                <td><span id="ExprSignSpan" class="glyphicon"></span></td>
+                <td><span id="CustSignSpan" class="glyphicon"></span></td>
+            </tr>
+            </tbody>
+        </table>		
+    </div>
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr><th><strong>State</strong></th></tr>
+			</thead
+			<tbody>
+				<tr><td id="tdState"></td></tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
